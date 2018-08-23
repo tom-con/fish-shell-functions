@@ -1,6 +1,5 @@
 function __broadcast_git_status -v PWD
-    set changes (git status -s) > /dev/null ^ /dev/null
-    if test -z $changes
+    if not [ (__is_git_dirty) ]
         set changeEmoji "✅  "
     else
         set changeEmoji "⚠️  "
