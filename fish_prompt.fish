@@ -15,14 +15,12 @@ function _git_stat
         set -l render_ahead (_render_ahead $ahead)
 
         if not [ (__is_git_dirty) ]
-            set changeEmoji "✅"
             set branchColor "green"
         else
-            set changeEmoji "⚠️"
             set branchColor "red"
         end
   
-        echo (set_color $branchColor)$branch (set_color magenta)$render_ahead  $changeEmoji
+        echo (set_color $branchColor)$branch (set_color magenta)$render_ahead
     else
         echo (set_color magenta)"no-git"
     end
@@ -31,7 +29,6 @@ end
 function fish_prompt
     set -l git_stat (_git_stat)
     set -l arrows (_arrows)
-
     # Main
-    echo -n (set_color cyan)(prompt_pwd)" 🦑  $git_stat  $arrows "
+    echo -n (set_color cyan)(prompt_pwd)" 🦑  $git_stat $arrows "
 end
