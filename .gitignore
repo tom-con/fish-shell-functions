@@ -1,8 +1,11 @@
 __bass.py
+__get_prod_collection.fish
 __nvm_run.fish
 bass.fish
 carb.fish
 fisher.fish
+getgreenchef.fish
+getshipping.fish
 gulp.fish
 node.fish
 npm.fish

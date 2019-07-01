@@ -1,5 +1,5 @@
 function _arrows
-    echo (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯'
+    echo (set_color A7A6FF)'❯'(set_color B3C4E8)'❯'(set_color D2EFFF)'❯'(set_color B3E7E8)'❯'(set_color C4FFEB)'❯'
 end
 
 function _render_ahead -a count
@@ -15,14 +15,14 @@ function _git_stat
         set -l render_ahead (_render_ahead $ahead)
 
         if not [ (__is_git_dirty) ]
-            set branchColor "green"
+            set coloredBranch (rainbow "$branch")
         else
-            set branchColor "red"
+            set coloredBranch (rainbow_red "$branch")
         end
   
-        echo (set_color $branchColor)$branch (set_color magenta)$render_ahead
+        echo $coloredBranch (set_color 4DEBB3)$render_ahead
     else
-        echo (set_color magenta)"no-git"
+        echo (set_color 4DEBB3)"no-git"
     end
 end
 
@@ -30,5 +30,5 @@ function fish_prompt
     set -l git_stat (_git_stat)
     set -l arrows (_arrows)
     # Main
-    echo -n (set_color cyan)(prompt_pwd)" 🦑  $git_stat $arrows "
+    echo -n  "⛩  "(set_color 4DD2EB)(prompt_pwd)" ⛩  $git_stat 🦑  $arrows "
 end
