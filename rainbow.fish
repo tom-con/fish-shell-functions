@@ -1,6 +1,6 @@
 function rainbow -a STR
   set ACC
-  set COLORS "DCADFF" "A79EE8" "B9CFFF" "9ED6E8" "A8FFED" "86E880" "D4FF87"
+  set COLORS "#D7FFEC" "#C4FFE3" "#A1FFD3" "#B2FFDC" "#8FFFCA" "#7FFFC2" "#6EFFB9" "#60FFB2" "#52FFAA"
   set LENGTH (count $COLORS)
   set POS (math 1 + 0)
   set REVERSE 0
