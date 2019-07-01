@@ -20,7 +20,7 @@ function _git_stat
             set coloredBranch (rainbow_red "$branch")
         end
   
-        echo $coloredBranch (set_color 4DEBB3)$render_ahead
+        echo $coloredBranch (set_color F9347C)$render_ahead
     else
         echo (set_color 4DEBB3)"no-git"
     end
