@@ -3,6 +3,6 @@ function weight -a file
   if [ -n "$file" ]
     du -sh node_modules/$file
   else
-    du -h node_modules | gsort -rh
+    du -h node_modules | sort -rh
   end
 end
