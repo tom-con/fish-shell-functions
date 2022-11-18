@@ -1,5 +1,5 @@
 function _arrows
-    echo (set_color A7A6FF)'❯'(set_color B3C4E8)'❯'(set_color D2EFFF)'❯'(set_color B3E7E8)'❯'(set_color C4FFEB)'❯'
+    echo (set_color B339FF)'❯'(set_color C465FF)'❯'(set_color D591FF)'❯'(set_color EED3FF)'❯'(set_color FFFFFF)'❯'
 end
 
 function _render_ahead -a count
@@ -29,6 +29,7 @@ end
 function fish_prompt
     set -l git_stat (_git_stat)
     set -l arrows (_arrows)
+    set -l shinto (set_color 880000)"⛩"
     # Main
-    echo -n  "⛩  "(set_color 4DD2EB)(prompt_pwd)" ⛩  $git_stat 🦑  $arrows "
+    echo -n  $shinto" "(set_color 4DD2EB)(prompt_pwd)(set_color 880000)" "$shinto  $git_stat 🦑  $arrows " "
 end
